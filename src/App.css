@@ -1,4 +1,6 @@
 .App {
   text-align: center;
   overflow: hidden;
+  background-color: #000000;
+  color: white;
 }
