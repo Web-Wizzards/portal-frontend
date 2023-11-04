@@ -1,0 +1,109 @@
+@import '../../../styles/color.scss';
+
+.input-container{
+    width: 100%;
+
+    &.date{
+        width: fit-content;
+    }
+
+    .label{
+        color: white;
+        margin: 10px 0px 10px 0px;
+
+        &.dark{
+            color: black;
+        }
+
+        &.error{
+            color: #ea3e3e;
+        }
+    }
+
+    .input-box{
+        background-color: white;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &.dark{
+            border: black 1px solid;
+        }
+
+        &.active{
+            border: green solid 2px;
+        }
+
+        .prefix{
+
+            display: flex;
+            align-items: center;
+            width: calc(100% - 30px);
+
+            .prefix-icon{
+                width: 20px;
+            }
+    
+            .input{
+                padding: 10px;
+                height: 20px;
+                width: calc(100% - 30px);
+                border: none;
+                outline: none;
+
+                &:focus{
+
+                    &::placeholder{
+                        color: green;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .suffix-icon{
+            width: 20px;
+            cursor: pointer;
+        }
+
+        &.sharp{
+            border-radius: 2px;
+        }
+
+        &.round{
+            border-radius: 5px;
+        }
+
+        &.disabled{
+            background-color: $disabledColor;
+            cursor: not-allowed;
+
+            .input{
+                background-color: $disabledColor;
+                cursor: not-allowed;
+            }
+
+            .suffix-icon{
+                cursor: pointer;
+            }
+        }
+
+        &.error{
+            border: $warningColor 1px solid;
+        }
+    }
+
+    .error-msg{
+        color: $warningColor;
+        margin-top: 5px;
+        font-weight: 300;
+    }
+}
+
+.error{
+    ::placeholder{
+        color: $warningColor;
+    }
+}

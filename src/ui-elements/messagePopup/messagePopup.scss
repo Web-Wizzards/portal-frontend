@@ -1,0 +1,48 @@
+@import '../../styles/color.scss';
+@import '../../styles/variables.scss';
+
+.popup-wrapper{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    &.bottom-center{
+        bottom: 20px;
+    }
+
+    &.bottom-right{
+        justify-content: flex-end;
+        right: 20px;
+    }
+
+    &.top-center{
+        top: 20px;
+    }
+
+    &.top-right{
+        top: 20px;
+        right: 20px;
+        justify-content: flex-end;
+    }
+
+    .message-popup-container{
+        display: flex;
+        background-color: white;
+        padding: 15px 20px;
+        width: fit-content;
+        color: black;
+        border-radius: 5px;
+
+        &.warning{
+            color: $warningColor;
+            border: 1px solid $warningColor;
+        }
+
+        &.success{
+            color: green;
+            border: 1px solid green;
+        }
+    }
+}
