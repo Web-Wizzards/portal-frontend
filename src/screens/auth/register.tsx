@@ -154,7 +154,17 @@ const Register:React.FC<RegisterProps> = () => {
                                 {/* > */}
                                     <div className='questions'>
                                         <InputFields label='Name' theme='dark' onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)} edges='round' placeholder='Enter your name here' required/>
-                                        <InputFields label='Email' theme='dark' onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} type='email' edges='round' placeholder='Enter your email here' required/>
+                                        <InputFields 
+                                          label='Email' 
+                                          theme='dark' 
+                                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} 
+                                          type='email' 
+                                          edges='round' 
+                                          placeholder='Enter your email here' 
+                                          // error={emailError}
+                                          errorMsg={"Please enter a valid email address"}
+                                          required
+                                        />
                                         <InputFields label='Mobile no' theme='dark' onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)} type='number' edges='round' placeholder='Enter your mobile here' required/>
                                         <InputFields 
                                             label='Create Passowrd'
