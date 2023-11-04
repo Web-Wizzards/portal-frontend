@@ -7,7 +7,7 @@ type LendProps = {
 const Lend:React.FC<LendProps> = () => {
   return (
     <div className="lend">
-
+        
     </div>
   )
 }
